@@ -117,11 +117,9 @@ package object Newton {
     }
   }
 
-  def buenaAprox(f: Expr, a: Atomo, d: Double): Boolean = {
-    evaluar(f, a, d) <= 0.00001
-  }
 
-  def RaizNewton(f: Expr, a : Atomo ,x0: Double,
+
+  def raizNewton(f: Expr, a : Atomo ,x0: Double,
                  ba: (Expr, Atomo, Double) => Boolean): Double = {
 
     def aux(f : Expr, df : Expr, x0 : Double) : Double = {
